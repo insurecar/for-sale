@@ -1,0 +1,107 @@
+.info {
+  max-width: 864px;
+  background: coral;
+  display: none;
+  position: relative;
+
+  @include tablets {
+    display: block;
+  }
+
+  @include fluid-size("width", 320px, 864px, 320px, 864px);
+  @include fluid-size("height", 320px, 864px, 245px, 658px);
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  &__square {
+    @include fluid-size("width", 385px, 864px, 170px, 309px);
+    @include fluid-size("height", 385px, 864px, 27px, 60px);
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    opacity: 0.75;
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-text {
+      position: absolute;
+      z-index: 3;
+      color: #fff;
+      font-size: 30px;
+      @include fluid-type(385px, 864px, 17px, 37px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "FreightBigMediumRegular";
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    @include fluid-size("height", 385px, 864px, 38px, 95px);
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    @include fluid-size("padding-left", 385px, 864px, 17px, 39px);
+    @include fluid-size("padding-right", 385px, 864px, 17px, 39px);
+    background: rgba(32, 33, 57, 0.75);
+
+    &-left {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      font-family: "FreightBigMediumRegular";
+      color: #fff;
+      @include fluid-type(385px, 864px, 14px, 31px);
+    }
+    &-right {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      @include fluid-size("padding-top", 385px, 864px, 8px, 15px);
+      @include fluid-size("padding-bottom", 385px, 864px, 8px, 15px);
+
+      & * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        & *:first-of-type {
+          @include fluid-type(385px, 864px, 8px, 18px);
+          font-family: "BentonSansCompRegular";
+        }
+
+        &:nth-child(2n) {
+          @include fluid-type(385px, 864px, 11px, 25px);
+          font-family: "BentonSans-Regular";
+        }
+      }
+    }
+  }
+}
+
+// .info__bottom-right-sq-text,
+// .info__bottom-right-bedrooms-text,
+// .info__bottom-right-price-text {
+//   color: red;
+// }

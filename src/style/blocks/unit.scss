@@ -1,0 +1,102 @@
+.unit__wrapper {
+  @include fluid-size("margin-top", 864px, 1920px, 62px, 138px);
+  &-border {
+    border: 2px solid #cccccc;
+
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
+.unit {
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-top: 200px;
+  @include fluid-size("margin-top", 864px, 1920px, 100px, 226px);
+  @include fluid-size("width", 865px, 1920px, 725px, 1610px);
+  @include fluid-size("height", 865px, 1920px, 361px, 802px);
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__left {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-top {
+      height: 40%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      &-small {
+        width: 44%;
+        height: 100%;
+      }
+
+      &-big {
+        width: 54.5%;
+        height: 100%;
+      }
+    }
+
+    &-bottom {
+      height: 58%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      &-big {
+        height: 100%;
+        width: 70%;
+      }
+
+      &-small {
+        height: 100%;
+        width: 28.5%;
+      }
+    }
+  }
+
+  &__right {
+    width: 23.78%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-top {
+      width: 100%;
+      height: 56%;
+    }
+
+    &-bottom {
+      width: 100%;
+      height: 42%;
+    }
+  }
+}
+
+.supper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: coral;
+
+  @include tablets {
+    display: block;
+  }
+}

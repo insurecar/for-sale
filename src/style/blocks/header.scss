@@ -1,0 +1,41 @@
+.header {
+  margin: 0 auto;
+  max-width: 1920px;
+  // background: lightgreen;
+  &__top {
+    height: 140px;
+    @include fluid-size("padding-left", 385px, 1920px, 15px, 50px);
+    @include fluid-size("padding-right", 385px, 1920px, 15px, 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-logo {
+      @include fluid-size("width", 385px, 1920px, 310px, 596px);
+      @include fluid-size("height", 385px, 1920px, 48px, 92px);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-name {
+      font-family: "BentonSans-Regular";
+      font-size: 30px;
+      color: #202139;
+
+      @include tablets() {
+        display: none;
+      }
+    }
+  }
+}
+
+.header__bottom {
+  max-width: 1920px !important;
+  overflow: hidden !important;
+  position: relative;
+  display: none;
+}

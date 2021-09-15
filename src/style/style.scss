@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gothambook-webfont.woff2") format("woff2"),
+    url("./fonts/gothambook-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gothambold-webfont.woff2") format("woff2"),
+    url("./fonts/gothambold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gothammedium-webfont.woff2") format("woff2"),
+    url("./fonts/gothammedium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/gothamlight-webfont.woff2") format("woff2"),
+    url("./fonts/gothamlight-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinionPro-Capt";
+  src: url("./fonts/MinionPro-Capt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MinionPro-Regular";
+  src: url("./fonts/MinionPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Brandon";
+  src: url("./fonts/brandon-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MinionPro Bold";
+  src: ("./fonts/MinionPro-Bold.woff" format("woff"));
+}
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: ("./fonts/ProximaNova-Regular.woff" format("woff"));
+}
+
+@font-face {
+  font-family: "BentonSans-Regular";
+  src: url("./fonts/BentonSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "FreightBigMediumRegular";
+  src: url("./fonts/FreightBigMediumRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BentonSansCompRegular";
+  src: url("./fonts/BentonSansCompRegular.woff") format("woff");
+}
+
+.button {
+  width: 310px;
+  padding: 11px 0px;
+  border: solid 2px #af9744;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  &_relative {
+    position: relative;
+  }
+  &_flex {
+    display: flex;
+  }
+  @include laptops {
+    min-width: 800px;
+    width: auto;
+    margin: 0 auto;
+    padding: 0px 30px;
+  }
+
+  @include tablets {
+    min-width: 440px;
+    margin: 0 auto;
+    padding: 0px 20px;
+  }
+
+  @include phones {
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0px 10px;
+  }
+}

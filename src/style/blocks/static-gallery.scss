@@ -1,0 +1,384 @@
+.sales-content {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.sales {
+  @include fluid-size("padding-top", 385px, 1920px, 28px, 137px);
+  @include fluid-size("padding-left", 385px, 1920px, 38px, 178px);
+
+  &__title {
+    font-family: "FreightBigMediumRegular";
+    color: #252526;
+    @include fluid-type(385px, 1920px, 14px, 70px);
+  }
+
+  &__border {
+    border: 1px solid #cccccc;
+    @include fluid-size("width", 385px, 1920px, 300px, 770px);
+    @include fluid-size("margin-top", 385px, 1920px, 20px, 35px);
+  }
+
+  &__content {
+    width: 100%;
+    @include fluid-size("margin-top", 385px, 1920px, 20px, 50px);
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      @include fluid-size("width", 865px, 1920px, 330px, 733px);
+      display: flex;
+      flex-direction: column;
+
+      @include tablets {
+        width: 90%;
+      }
+
+      &-text {
+        font-family: "BentonSans-Regular";
+        color: #252526;
+        @include fluid-size("line-height", 385px, 1920px, 15px, 50px);
+        @include fluid-type(865px, 1920px, 7px, 28px);
+      }
+
+      &-button {
+        @include fluid-size("margin-top", 385px, 1920px, 15px, 40px);
+        @include fluid-size("width", 385px, 1920px, 72px, 357px);
+        @include fluid-size("height", 385px, 1920px, 15px, 72px);
+
+        button {
+          width: 100%;
+          height: 100%;
+          border: none;
+          background: #202139;
+          color: #fff;
+          @include fluid-type(385px, 1920px, 7px, 26px);
+        }
+      }
+    }
+
+    &-right {
+      @include fluid-size("width", 865px, 1920px, 392px, 870px);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      &-popup {
+        @include fluid-size("width", 865px, 1920px, 392px, 870px);
+        height: 300px;
+        position: absolute;
+        background: #fff;
+      }
+      &-hide {
+        display: none;
+      }
+
+      @include tablets {
+        display: none;
+      }
+
+      &-header {
+        width: 100%;
+        // height: 18.4%;
+        @include fluid-size("height", 865px, 1920px, 44px, 97px);
+        background: #eee;
+        margin-bottom: 0.5%;
+        display: flex;
+        align-items: center;
+        font-family: "BentonSans-Regular";
+        color: #202139;
+        @include fluid-type(865px, 1920px, 18px, 40px);
+        @include fluid-size("padding-left", 865px, 1920px, 33px, 72px);
+      }
+
+      &-main {
+        width: 100%;
+        height: 62.2%;
+        @include fluid-size("height", 865px, 1920px, 126px, 277px);
+        @include fluid-size("padding-left", 865px, 1920px, 33px, 72px);
+        box-sizing: border-box;
+        background: #eee;
+        display: flex;
+        align-items: center;
+
+        &-photo {
+          // @include fluid-size("margin-top", 865px, 1920px, 23px, 51px);
+          display: flex;
+          @include fluid-size("width", 865px, 1920px, 86px, 192px);
+          @include fluid-size("height", 865px, 1920px, 110px, 244px);
+          @include fluid-size("margin-right", 865px, 1920px, 17px, 37px);
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-data {
+          align-self: flex-start;
+          @include fluid-size("margin-top", 865px, 1920px, 23px, 51px);
+
+          &-name {
+            color: #202139;
+            font-family: "FreightBigMediumRegular";
+            @include fluid-type(865px, 1920px, 12px, 25px);
+          }
+
+          &-job {
+            color: #666;
+            font-family: "BentonSans-Regular";
+            @include fluid-type(865px, 1920px, 8px, 17px);
+            margin-top: 5px;
+            margin-bottom: 7px;
+          }
+
+          &-phone,
+          &-mobile {
+            font-family: "BentonSans-Regular";
+            @include fluid-type(865px, 1920px, 7px, 15px);
+
+            color: #666;
+            span {
+              color: #373737;
+            }
+          }
+
+          &-mobile {
+            margin-bottom: 7px;
+          }
+
+          &-address {
+            font-family: "BentonSans-Regular";
+
+            @include fluid-type(865px, 1920px, 7px, 15px);
+            color: #666;
+          }
+        }
+      }
+
+      &-footer {
+        width: 100%;
+        background: #202139;
+        @include fluid-size("padding-left", 865px, 1920px, 33px, 72px);
+        @include fluid-type(865px, 1920px, 12px, 25px);
+        @include fluid-size("height", 865px, 1920px, 44px, 97px);
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-family: "BentonSans-Regular";
+      }
+    }
+  }
+}
+
+.form__box {
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.form {
+  max-width: 870px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__agent {
+    &-header {
+      width: 100%;
+      @include fluid-size("height", 385px, 870px, 43px, 97px);
+      background: orange;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      font-family: "BentonSans-Regular";
+      color: #fff;
+      background: #202139;
+      @include fluid-type(320px, 870px, 9px, 25px);
+      @include fluid-size("padding-left", 320px, 870px, 10px, 73px);
+    }
+
+    &-main {
+      width: 100%;
+      @include fluid-size("height", 385px, 870px, 53px, 107px);
+      @include fluid-size("padding-left", 320px, 870px, 5px, 39px);
+      @include fluid-type(320px, 870px, 15px, 40px);
+      font-family: "BentonSans-Regular";
+      background: #eee;
+      color: #202139;
+      display: flex;
+      align-items: center;
+    }
+
+    &-footer {
+      width: 100%;
+      @include fluid-size("height", 385px, 870px, 140px, 320px);
+      @include fluid-size("padding-left", 320px, 870px, 10px, 55px);
+      @include fluid-size("padding-top", 320px, 870px, 16px, 44px);
+      background: #eee;
+      margin-top: 2px;
+      display: flex;
+      &-photo {
+        @include fluid-size("width", 320px, 870px, 70px, 192px);
+        @include fluid-size("height", 320px, 870px, 90px, 244px);
+        @include fluid-size("margin-right", 320px, 870px, 14px, 37px);
+        background: yellow;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-data {
+        &-name {
+          font-family: "FreightBigMediumRegular";
+          color: #202139;
+          @include fluid-type(320px, 870px, 9px, 25px);
+          @include fluid-size("margin-bottom", 385px, 870px, 5px, 15px);
+        }
+
+        &-job {
+          font-family: "BentonSans-Regular";
+          color: #666;
+          @include fluid-type(320px, 870px, 7px, 17px);
+          @include fluid-size("margin-bottom", 385px, 870px, 5px, 15px);
+        }
+
+        &-phone,
+        &-mobile {
+          color: #666;
+          font-family: "BentonSans-Regular";
+          @include fluid-type(320px, 870px, 6px, 15px);
+
+          span {
+            color: #373737;
+          }
+        }
+
+        &-mobile {
+          @include fluid-size("margin-bottom", 385px, 870px, 5px, 15px);
+        }
+
+        &-address {
+          @include fluid-type(320px, 870px, 6px, 15px);
+          color: #666;
+          font-family: "BentonSans-Regular";
+        }
+      }
+    }
+  }
+
+  &__action {
+    margin-top: 2px;
+    background-color: #eee;
+    @include fluid-size("padding-top", 385px, 870px, 11px, 26px);
+    @include fluid-size("padding-left", 385px, 870px, 26px, 60px);
+    @include fluid-size("padding-right", 385px, 870px, 26px, 60px);
+    @include fluid-size("padding-bottom", 385px, 870px, 31px, 70px);
+
+    &-title {
+      font-family: "BentonSans-Regular";
+      @include fluid-type(320px, 870px, 8px, 20px);
+    }
+
+    &-name,
+    &-email,
+    &-number {
+      width: 100%;
+      @include fluid-size("height", 320px, 870px, 22px, 58px);
+      @include fluid-size("margin-top", 320px, 870px, 18px, 49px);
+
+      input {
+        width: 100%;
+        height: 100%;
+        background: #eee;
+        border: 3px solid #cccccc;
+        box-sizing: border-box;
+        @include fluid-size("padding-left", 320px, 870px, 7px, 19px);
+      }
+    }
+
+    &-textarea {
+      width: 100%;
+      @include fluid-size("height", 320px, 870px, 75px, 206px);
+      @include fluid-size("margin-top", 320px, 870px, 18px, 49px);
+
+      textarea {
+        width: 100%;
+        height: 100%;
+        resize: none;
+        background: #eee;
+        border: 3px solid #cccccc;
+      }
+    }
+
+    &-captcha {
+      margin-top: 5px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      @include fluid-type(320px, 870px, 5px, 15px);
+      color: #6d6d6d;
+      span {
+        color: #1a1b36;
+      }
+    }
+
+    &-button {
+      margin: 0 auto;
+      // @include fluid-size("width", 320px, 870px, 184px, 500px);
+      // @include fluid-size("height", 320px, 870px, 25px, 66px);
+      @include fluid-size("margin-top", 320px, 870px, 22px, 60px);
+      display: flex;
+      justify-content: center;
+      button {
+        // width: 100%;
+        // height: 100%;
+        border: none;
+        color: #fff;
+        background: #202139;
+        @include fluid-type(320px, 870px, 10px, 30px);
+        @include fluid-size("padding-top", 320px, 870px, 5px, 12px);
+        @include fluid-size("padding-bottom", 320px, 870px, 5px, 12px);
+        @include fluid-size("padding-left", 320px, 870px, 50px, 130px);
+        @include fluid-size("padding-right", 320px, 870px, 50px, 130px);
+      }
+    }
+  }
+}
+
+.form__agent-header-right-close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 2px;
+    background-color: #fff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
