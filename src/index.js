@@ -26,6 +26,7 @@ import Form from "./components/Form";
 import Agent from "./components/Agent";
 import Map from "./components/Map";
 import SalesArguments from "./components/SalesArguments";
+import AgentDescription from "./components/AgentDescription";
 
 import getQueryParams from "./getQueryParams";
 
@@ -81,11 +82,11 @@ const App = () => {
       </div>
       <Info {...data} />
       <SalesArguments {...data} />
-
-      {/* <Map {...data} /> */}
       <UnitList {...data} />
-      {/* <Agent {...data} /> */}
-      {/* <FooterWrapper {...data} /> */}
+      <Map {...data} />
+      <Agent {...data} />
+      <AgentDescription {...data} />
+      <FooterWrapper {...data} />
     </ToastProvider>
   );
 };

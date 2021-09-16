@@ -358,6 +358,8 @@
   top: 32px;
   width: 32px;
   height: 32px;
+  top: 50%;
+  transform: translate(0, -50%);
   opacity: 0.3;
   cursor: pointer;
   &:hover {

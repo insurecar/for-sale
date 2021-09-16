@@ -1,6 +1,8 @@
 .unit__wrapper {
   @include fluid-size("margin-top", 864px, 1920px, 62px, 138px);
   &-border {
+    max-width: 1920px;
+    margin: 0 auto;
     border: 2px solid #cccccc;
 
     @include tablets {
@@ -89,14 +91,80 @@
     }
   }
 }
-
-.supper {
+.unit__slider {
   display: none;
-  width: 100%;
-  height: 100%;
-  background: coral;
-
+  @include fluid-size("padding-left", 320px, 864px, 0px, 80px);
+  @include fluid-size("padding-right", 320px, 864px, 0px, 80px);
   @include tablets {
     display: block;
+  }
+
+  .glide__arrows {
+    &--prev {
+      z-index: 1;
+    }
+    // position: absolute;
+    // z-index: 300;
+  }
+
+  .wrap__glide {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    .glide__arrow {
+      @include fluid-size("width", 320px, 864px, 20px, 50px);
+      @include fluid-size("height", 320px, 864px, 20px, 50px);
+      z-index: 200;
+      position: absolute;
+
+      &-icon {
+        @include fluid-type(320px, 864px, 20px, 35px);
+      }
+
+      &--prev {
+        left: 10px;
+      }
+
+      &--next {
+        right: 10px;
+      }
+    }
+  }
+  .glide__slide {
+    border: 1px solid black;
+    background: silver;
+    margin: 0;
+    text-align: center;
+    @include fluid-size("height", 320px, 864px, 205px, 470px);
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.unit__bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  @include fluid-size("height", 320px, 864px, 96px, 260px);
+
+  &-left,
+  &-right {
+    width: 49%;
+    height: 100%;
+    background: green;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

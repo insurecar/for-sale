@@ -1,90 +1,126 @@
 .footer {
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  background-color: #343534;
-  height: 225px;
+  flex-direction: column;
+  @include fluid-size("margin-top", 320px, 1920px, 5px, 40px);
 
-  div:first-child {
-    background: greenyellow;
+  &__top {
+    @include fluid-size("padding-top", 320px, 1920px, 10px, 36px);
+    @include fluid-size("padding-bottom", 320px, 1920px, 10px, 36px);
+    @include fluid-size("padding-left", 320px, 1920px, 17px, 100px);
+    @include fluid-size("padding-right", 320px, 1920px, 17px, 100px);
+    background: #202139;
+
+    background: #202139;
+    width: 100%;
     display: flex;
     align-items: center;
+    @include fluid-size("column-gap", 864px, 1920px, 20px, 40px);
+    @include tablets {
+      flex-wrap: wrap;
+      row-gap: 10px;
+      justify-content: center;
+    }
+
+    &-left {
+      width: 15%;
+      @include tablets {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &-text {
+        color: #fff;
+        font-family: "BentonSans-Regular";
+        @include fluid-type(320px, 1920px, 6px, 35px);
+      }
+
+      &-border {
+        border: 1px solid #ffffff;
+        @include tablets {
+          width: 100px;
+          border: 0.5px solid #ffffff;
+        }
+        @include phones {
+          border: 0.2px solid #fff;
+        }
+      }
+    }
+    &-middle {
+      width: 69%;
+      display: flex;
+      justify-content: space-between;
+
+      @include phones {
+        width: 100%;
+      }
+
+      input {
+        width: 30%;
+        @include fluid-size("height", 320px, 1920px, 9px, 49px);
+        background: none;
+        border: 2px solid #ffffff;
+        @include fluid-size("padding-left", 320px, 1920px, 5px, 29px);
+        @include phones {
+          border: 0.5px solid #ffffff;
+        }
+        &::placeholder {
+          font-size: 8px;
+          @include fluid-type(320px, 1920px, 7px, 20px);
+          overflow: unset;
+          top: 50%;
+          transform: translate(0, -50%);
+          position: absolute;
+        }
+      }
+    }
+    &-right {
+      width: 16%;
+      background: lightcoral;
+      display: flex;
+      align-items: center;
+
+      button {
+        width: 100%;
+        border: none;
+        @include fluid-size("height", 320px, 1920px, 9px, 49px);
+        background: #fff;
+        color: #202139;
+        @include fluid-type(320px, 1920px, 5px, 20px);
+      }
+    }
   }
 
-  @include laptops {
-    padding: 0px;
-  }
-
-  @include tablets {
+  &__bottom {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 80px;
-    min-height: 240px;
-    height: 100%;
-  }
+    align-items: center;
+    @include fluid-size("column-gap", 320px, 1920px, 6px, 36px);
+    @include fluid-size("padding-top", 320px, 1920px, 9px, 52px);
+    @include fluid-size("padding-bottom", 320px, 1920px, 9px, 52px);
+    @include fluid-type(320px, 1920px, 4px, 22px);
 
-  @include phones {
-    min-height: 240px;
-    padding-top: 80px;
-    height: 100%;
-  }
+    &-left {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      &-wrapper {
+        @include fluid-size("width", 320px, 1920px, 45px, 271px);
+        @include fluid-size("height", 320px, 1920px, 7px, 42px);
 
-  &-wrapper {
-    background-color: #343534;
-  }
-
-  &__text {
-    font-family: BasisGrotesquePro;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.63;
-    color: #ffffff;
-    margin-top: 34.4px;
-    margin-bottom: 36px;
-    max-width: 652px;
-    width: 100%;
-
-    @include laptops {
-      margin-right: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
-
-    @include tablets {
-      font-size: 15px;
+    &-right {
+      width: 50%;
+      font-family: "BentonSans-Regular";
     }
-  }
-
-  &__logo {
-    width: 100%;
-
-    height: 80%;
-    color: #000;
-    // margin-top: 67px;
-    // margin-bottom: 57px;
-    object-fit: contain;
-
-    @include tablets {
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 50px;
-    }
-
-    @include phones {
-      margin-bottom: 30px;
-    }
-  }
-
-  div:last-child {
-    margin-right: 90px;
-
-    @include tablets {
-      margin-right: 0px;
-    }
-  }
-}
-
-.footer-last-logo img {
-  @include phones() {
-    width: 90%;
   }
 }

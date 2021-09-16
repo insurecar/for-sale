@@ -1,0 +1,214 @@
+.agent__description-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  @include fluid-size("padding-left", 320px, 1920px, 5px, 28px);
+  @include fluid-size("padding-right", 320px, 1920px, 5px, 28px);
+  @include fluid-size("margin-top", 320px, 1920px, 5px, 30px);
+  position: relative;
+
+  &-button {
+    position: absolute;
+    transform: rotate(-90deg) translate(-50%, 50%);
+    top: 50%;
+    transform-origin: left center;
+    @include fluid-size("height", 864px, 1920px, 25px, 55px);
+    @include fluid-size("width", 864px, 1920px, 160px, 355px);
+    @include fluid-type(864px, 1920px, 12px, 26px);
+    background: #202139;
+    color: #fff;
+    font-family: "BentonSans-Regular";
+    border: none;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &-popup {
+    display: none;
+    position: absolute;
+    background: white;
+    bottom: 0;
+    z-index: 99999999;
+    &-show {
+      display: block;
+    }
+  }
+}
+
+.agent__description {
+  background: #f6f6f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include fluid-size("padding-top", 864px, 1920px, 32px, 70px);
+  @include fluid-size("padding-bottom", 864px, 1920px, 32px, 70px);
+  @include fluid-size("padding-left", 864px, 1920px, 90px, 200px);
+  @include fluid-size("padding-right", 864px, 1920px, 61px, 135px);
+
+  @include tablets {
+    display: none;
+  }
+
+  &-photo {
+    @include fluid-size("width", 864px, 1920px, 218px, 484px);
+    @include fluid-size("height", 864px, 1920px, 285px, 632px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    @include fluid-size("width", 864px, 1920px, 405px, 900px);
+    display: grid;
+    flex-direction: column;
+    @include fluid-size("row-gap", 864px, 1920px, 15px, 34px);
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+
+      &-worker {
+        color: #252526;
+        font-family: "FreightBigMediumRegular";
+        @include fluid-type(864px, 1920px, 19px, 41px);
+      }
+
+      &-job {
+        color: #3a3a39;
+        font-family: "BentonSans-Regular";
+        @include fluid-type(864px, 1920px, 11px, 25px);
+      }
+
+      &-border {
+        border: 0.5px solid #cccccc;
+        @include fluid-size("width", 864px, 1920px, 125px, 277px);
+        @include fluid-size("margin-top", 864px, 1920px, 9px, 20px);
+      }
+    }
+
+    &-text {
+      font-family: "BentonSans-Regular";
+      color: #62636c;
+      @include fluid-type(864px, 1920px, 12px, 28px);
+    }
+
+    &-button {
+      @include fluid-size("width", 864px, 1920px, 204px, 453px);
+      @include fluid-size("height", 864px, 1920px, 30px, 66px);
+
+      button {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: 4px solid #202139;
+        font-family: "BentonSans-Regular";
+        color: #202139;
+        @include fluid-type(864px, 1920px, 13px, 30px);
+      }
+    }
+  }
+
+  &-mobile {
+    background: #f6f6f4;
+    @include fluid-size("row-gap", 320px, 864px, 14px, 30px);
+    @include fluid-size("padding-top", 320px, 864px, 27px, 60px);
+    @include fluid-size("padding-bottom", 320px, 864px, 27px, 60px);
+    display: none;
+    position: relative;
+
+    &-popup {
+      position: absolute;
+      bottom: 0;
+      display: none;
+      background: white;
+
+      &-show {
+        display: block;
+      }
+    }
+
+    &-button {
+      position: absolute;
+      transform: rotate(-90deg) translate(-50%, 50%);
+      transform-origin: left center;
+      top: 35%;
+      background: #202139;
+      color: #fff;
+      @include fluid-size("height", 320px, 864px, 25px, 67px);
+      @include fluid-size("width", 320px, 864px, 122px, 330px);
+      @include fluid-type(320px, 864px, 9px, 25px);
+    }
+
+    @include tablets {
+      display: grid;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-worker {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-name {
+        color: red;
+        font-family: "FreightBigMediumRegular";
+        color: #252526;
+        @include fluid-type(320px, 864px, 13px, 30px);
+      }
+
+      &-job {
+        color: #3a3a39;
+        font-family: "BentonSans-Regular";
+        @include fluid-type(320px, 864px, 7px, 17px);
+      }
+    }
+
+    &-photo {
+      @include fluid-size("width", 320px, 1920px, 114px, 306px);
+      @include fluid-size("height", 320px, 1920px, 142px, 383px);
+      background: lightgreen;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-text {
+      @include fluid-size("padding-left", 320px, 864px, 37px, 98px);
+      @include fluid-size("padding-right", 320px, 864px, 37px, 98px);
+      @include fluid-size("line-height", 320px, 864px, 14px, 30px);
+      @include fluid-type(320px, 864px, 7px, 19px);
+      color: #62636c;
+
+      &-desc {
+        text-align: center;
+      }
+
+      &-button {
+        margin-top: 30px;
+        @include fluid-size("margin-top", 320px, 864px, 14px, 37px);
+        display: flex;
+        justify-content: center;
+
+        button {
+          border: none;
+          @include fluid-size("width", 320px, 864px, 104px, 280px);
+          @include fluid-size("height", 320px, 864px, 15px, 41px);
+          color: #202139;
+          font-family: "BentonSans-Regular";
+          @include fluid-type(320px, 864px, 6px, 16px);
+          border: 2px solid #202139;
+          background: #f6f6f4;
+        }
+      }
+    }
+  }
+}

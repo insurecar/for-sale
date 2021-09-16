@@ -1,30 +1,33 @@
 import { h } from "preact";
 import { t } from "ttag";
 
-const FooterWrapper = ({ logo }) => {
+const FooterWrapper = ({ footerCopyright, footerLogo }) => {
   return (
-    <div className="footer-wrapper">
-      <div className="container">
-        <div className="footer">
-          <div>
-            <img
-              className="footer__logo footer__logo--project"
-              src={logo.footer}
-            />
-          </div>
-          <div className = 'footer-last-logo'>
-            <a
-              href="https://www.eiendomsmegler1.no/kontor/MSHED:16"
-              target="_blank"
-              rel="nofollow"
-            >
-              <img
-                className="footer__logo footer__logo--company"
-                src="../images/logo_EiendomsMegler.png"
-              />
-            </a>
+    <div className="footer">
+      <div className="footer__top">
+        <div className="footer__top-left">
+          <div className="footer__top-left-text">View Property</div>
+          <div className="footer__top-left-border"></div>
+        </div>
+        <div className="footer__top-middle">
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="E-mail" />
+          <input type="text" placeholder="Phone Number" />
+        </div>
+        <div className="footer__top-right">
+          <button>BOOK A VIEWING</button>
+        </div>
+      </div>
+      <div className="footer__bottom">
+        <div className="footer__bottom-left">
+          <div className="footer__bottom-left-wrapper">
+            <img src={footerLogo} />
           </div>
         </div>
+        <div
+          className="footer__bottom-right"
+          dangerouslySetInnerHTML={{ __html: footerCopyright }}
+        ></div>
       </div>
     </div>
   );

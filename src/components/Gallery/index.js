@@ -20,7 +20,7 @@ const Gallery = ({
   useEffect(() => {
     if (galleryImages.length === 0) return;
 
-    const glide = new Glide(".glide", {
+    const glide1 = new Glide(".glide", {
       autoplay: 6000,
       hoverpause: true,
       keyboard: true,
@@ -42,7 +42,7 @@ const Gallery = ({
       // },
     }).mount({ Transformer });
 
-    return () => glide.destroy();
+    return () => glide1.destroy();
   });
 
   if (galleryImages.length === 0) return null;

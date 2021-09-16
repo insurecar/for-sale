@@ -166,5 +166,11 @@
   "salesJob": "Real Estate Professional",
   "salesPhone": " +1 215.735.2225",
   "salesMobile": "  +1 610.203.2747",
-  "salesAddress": "1631 Locust Street 3rd Floor <br> Philadelphia, Pennsylvania 19103 United St..."
+  "salesAddress": "1631 Locust Street 3rd Floor <br> Philadelphia, Pennsylvania 19103 United St...",
+  "video": "/images/video.mp4",
+  "agentDescriptionText": "Katerina Dimitriadis was part of the Sales Team for The Ritz-Carlton Residences, Philadelphia, since its inception in 2005, becoming Sales Director in 2011. Her knowledge of the building and its residents provides continuity and enhances residents’ confidence of the service level they are accustomed to. Born in Athens, Greece, Katerina grew up in the Philadelphia area, earned a B.S. in Business Administration from Philadelphia University and an M.B.A. from Embry-Riddle Aeronautical University. She has worked in Center City since 1991 and recently moved from the suburbs to become a Center City resident.",
+  "agentDescriptionContact": "+ CONTACT KATERINA",
+  "footerCopyright": "Copyright © 2021 Kurfiss Sotheby’s International Realty. <br/> All rights reserved.",
+  "footerLogo": "./images/footerLogo.png"
+  
 }

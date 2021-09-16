@@ -1,0 +1,149 @@
+{
+  "host": "http://localhost:3000/",
+  "locale": "nb",
+  "currency": "NOK",
+  "country": "NO",
+  "campaignUuid": "c1ced80c-4590-4f8a-b300-0a692dd2f9f0",
+  "companyUuid": "da964fc3-1434-4566-9acd-3cee83d017c0",
+  "titleEnabled": true,
+  "introEnabled": true,
+  "projectDescriptionEnabled": true,
+  "areaDescriptionEnabled": true,
+  "galleryEnabled": true,
+  "salesArgumentsEnabled": true,
+  "showingsEnabled": true,
+  "mapEnabled": true,
+  "unitsListEnabled": true,
+  "title": "Bo i sentrum av Heimdal",
+  "headerImage": {
+    "large": "./images/header-bg-blom.png"
+  },
+  "logo": {
+    "large": "./images/header-logo-blom.png",
+    "footer": "./images/header-logo-blom.png"
+  },
+  "prospectUrl": "#",
+  "intro": "<b>Ny leilighet – nytt kapittel</b> <br><br><span> Er du moden for å forlate eneboligen og flytte inn i leilighet, eller er du ivrig etter å vri om nøkkelen i din aller første bolig? Blomkvartalet er Heimdal på sitt aller beste – omkranset av restauranter og kafeer, og med helt ny dagligvarebutikk i første etasje!</span>",
+  "visitingHours": [
+    "18/11/2019 - 12:00",
+    "22/11/2019 - 15:00"
+  ],
+  "galleryImages": [
+    { "large" : "./images/headimg1.png"},
+    { "large" : "./images/headimg2.png"},
+    { "large" : "./images/headimg3.png"},
+    { "large" : "./images/headimg4.png"},
+    { "large" : "./images/headimg5.png"},
+    { "large" : "./images/headimg6.png"}
+  ],
+  "leadsEndpoint": "Bli kjent med det unike og sentrumsnære Blomkvartalet",
+  "location": {
+    "lat": 52.555,
+    "lng": 5.91111
+  },
+  "projectDescription": "Blomkvartalet vil bestå av 2-roms, 3-roms og 4-roms leiligheter fra 40 til 79 kvm. Alle leilighetene har nye og moderne kjøkken med integrerte hvitevarer, store vindusflater og 3-stavs hvitlasert eikeparkett.",
+  "projectDescriptionImage": {
+    "large": "https://via.placeholder.com/830x560"
+  },
+  "areaDescription": "Midt i Heimdal sentrum skal det bygges 85 nye leiligheter med nærhet til butikker, kafeer, marka og kollektivtransport. Like ved finner du også treningssenter, klesbutikker og sushibar – kort sagt alt du trenger!",
+  "areaDescriptionImage": {
+    "large": "./images/info-bg-blom.png"
+  },
+  "salesArgument1": "Blomkvartalet er stedet for deg som vil slippe kaoset i Midtbyen – men som synes det altfor landlige fort blir kjedelig. Få skritt fra ytterdøra finner du alt et sentrum skal ha, fra dagligvarebutikker og treningssenter til frisør, og apotek. ",
+  "salesArgument2": "Her kan du bo i fleksible 2-romsleiligheter, så vel som 4-roms med godt albuerom. I de minste hjemmene har du plassutnyttelse som er større leiligheter verdig, og i noen av de største får du walk-in i forbindelse med hovedsoverom.",
+  "salesArgument3": "Lite er så spennende som en helt ny bolig! I Blomkvartalet er alt nytt. Her får du vannbåren varme, flislagt bad og selvfølgelig heis. I tillegg får du tilgang til felleshagen – som du kan nyte uten å tenke på gressklipping eller vedlikehold.",
+  "company": {
+    "name": "Eiendomsmegler Vest",
+    "legalName": "Eiendomsmegler Vest AS",
+    "phoneNumber": "+47 11 22 33",
+    "email": "mail@sipes.no",
+    "registrationNumber": "000 111 222",
+    "location": {
+      "address": "446 Roman Points Suite 110",
+      "city": "Archiechester",
+      "country": "",
+      "zipCode": "0452"
+    }
+  },
+  "units": [
+    {
+      "unitId": "A301",
+      "bedroomCount": 3,
+      "floorNumber": 3,
+      "sizeM2": "78,7",
+      "totalPrice": 4273140,
+      "floorPlan": "./images/galery-img1.png"
+    },
+    {
+      "unitId": "A303",
+      "bedroomCount": 2,
+      "floorNumber": 3,
+      "sizeM2": "60,3",
+      "totalPrice": 3320690,
+      "floorPlan": "./images/galery-img1.png"
+    },
+    {
+      "unitId": "A304",
+      "bedroomCount": 2,
+      "floorNumber": 4,
+      "sizeM2": "60,3",
+      "totalPrice": 3320690,
+      "floorPlan": "./images/galery-img1.png"
+    },
+    {
+      "unitId": "A305",
+      "bedroomCount": 3,
+      "floorNumber": 3,
+      "sizeM2": "78,7",
+      "totalPrice": 4373140,
+      "floorPlan": "./images/galery-img1.png"
+    }
+  ],
+  "pricesEnabled": true,
+  "minPrice": 1000000,
+  "maxPrice": 2000000,
+  "agents": [
+    {
+      "name": "Jørgen Rostad <br> <span class = 'agent-description-text__title-prof' > Avd. leder / Eiendomsmegler </span>",
+      "phoneNumber": "928 06 483 ",
+      "email": "E-post: jorgen.rostad@em1.no",
+      "image": {
+        "large": "./images/Anna4.png"
+      }
+    },
+    {
+      "name": "Ane Nes <br> <span class = 'agent-description-text__title-prof'>Eiendomsmegler</span>",
+      "phoneNumber": "915 88 153",
+      "email": "E-post: ane.nes@em1.no",
+      "image": {
+        "large": "./images/Anna3.png"
+      }
+    },
+    {
+      "name": "Maren J. Smedhaug <br><span class = 'agent-description-text__title-prof' >Eiendomsmegler</span>",
+      "phoneNumber": "957 28 666",
+      "email": "E-post:maren.smedhaug@em1.no",
+      "image": {
+        "large": "./images/Anna2.png"
+      }
+    },
+    {
+      "name": "Malin M. Pedersen <br><span class = 'agent-description-text__title-prof'>Eiendomsmegler</span>",
+      "phoneNumber": "911 64 806",
+      "email": "E-post: malin.pedersen@em1.no",
+      "image": {
+        "large": "./images/Anna1.png"
+      }
+    },
+    {
+      "name": "Kathrine Brekke Borren <br><span class = 'agent-description-text__title-prof'>Eiendomsmegler</span>",
+      "phoneNumber": "916 65 104",
+      "email": "E-post: kathrine.borren@em1.no",
+      "image": {
+        "large": "./images/Anna5.png"
+      }
+    }
+  ],
+  "headerLogo":"./images/headerLogo.png",
+    "headerPhone": "+1 877-586-0433"
+}

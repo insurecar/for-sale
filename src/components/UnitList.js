@@ -1,10 +1,25 @@
 import { h } from "preact";
 import { t } from "ttag";
-import Gallery from "./Gallery/index";
 
 import UnitInformation from "./UnitInformation";
+import { useEffect } from "preact/compat";
+import Glide from "@glidejs/glide";
+
+import Transformer from "./Gallery/Transformer";
 
 const UnitList = ({ galleryImages = [] }) => {
+  useEffect(() => {
+    var glideHero = new Glide(".hero", {
+      type: "carousel",
+      animationDuration: 700,
+      autoplay: 6000,
+      focusAt: "1",
+      startAt: 3,
+      perView: 1,
+    });
+    glideHero.mount();
+  });
+
   return (
     <div className="unit__wrapper">
       <div className="unit__wrapper-border"></div>
@@ -36,11 +51,49 @@ const UnitList = ({ galleryImages = [] }) => {
           </div>
         </div>
       </div>
-      {/* ! S__T__A__R__T____G___A___L___L___E___R___Y */}
-      <div className="supper">
-        <Gallery galleryImages={galleryImages} />
+      <div className="unit__slider">
+        <div className="wrap__glide">
+          <div class="glide hero">
+            <div class="glide__track" data-glide-el="track">
+              <div class="glide__slides">
+                {galleryImages.map(({ large }) => (
+                  <div class="glide__slide">
+                    <img src={large} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="glide__arrows" data-glide-el="controls">
+              <div
+                className="glide__arrow glide__arrow--prev"
+                data-glide-dir="&lt;"
+              >
+                <i
+                  className="fa fa-angle-left glide__arrow-icon"
+                  aria-hidden="true"
+                />
+              </div>
+              <div
+                className="glide__arrow glide__arrow--next"
+                data-glide-dir="&gt;"
+              >
+                <i
+                  className="fa fa-angle-right glide__arrow-icon"
+                  aria-hidden="true"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="unit__bottom">
+          <div className="unit__bottom-left">
+            <img src={galleryImages[4].large} alt="photo" />
+          </div>
+          <div className="unit__bottom-right">
+            <img src={galleryImages[5].large} alt="photo" />
+          </div>
+        </div>
       </div>
-      {/* S__T__A__R__T____G___A___L___L___E___R___Y */}
     </div>
   );
 };

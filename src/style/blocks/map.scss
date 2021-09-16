@@ -1,14 +1,32 @@
 .map {
-	height: 500px;
-	@include phones {
-		height: 400px;
-	}
-	& a {
-		display: none;
-	}
-	& button {
-		display: none;
-	}
+  max-width: 1920px;
+  margin: 0 auto;
+  @include fluid-size("margin-top", 320px, 1920px, 10px, 208px);
+  height: 500px;
+  position: relative;
+  @include phones {
+    height: 400px;
+  }
+  & a {
+    display: none;
+  }
+  & button {
+    display: none;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 111;
+    background: #ccc;
+    color: #202139;
+    opacity: 0.8;
+    width: 100%;
+    @include fluid-size("height", 320px, 1920px, 22px, 60px);
+    @include fluid-type(320px, 1920px, 5px, 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .gm-style-mtc > div,
